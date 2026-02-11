@@ -1,19 +1,24 @@
 import java.util.Scanner;
 
 public class CalculDuty {
-    public static void main(String[] agrs) {
+    public static String result;
+    public static void Scanner() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Здравствуйте");
         System.out.print("Введите вес (в кг.)");
-        int a = scanner.nextInt();
+        int weight = scanner.nextInt();
         System.out.print("Введите сумму(в руб.");
-        int b = scanner.nextInt();
+        int price = scanner.nextInt();
         System.out.print("Сумма пошлины:");
-        printMult(a, b);
+        Duty(weight, price);
     }
 
-    public static void printMult(int a, int b) {
-        int result = a * 100 + b / 100;
+    public static void Duty(int weight, int price) {
+        int result = weight * 100 + price / 100;
+        System.out.println(result);
+    }
+    public static void main(String[] args) {
+        Scanner();
         System.out.println(result);
     }
 }
